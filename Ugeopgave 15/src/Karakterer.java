@@ -26,7 +26,15 @@ public class Karakterer {
         }
 
         for (int i = 0; i< karakterer.length; i++) {
-            ;
+                System.out.println(elever.get(i).getName());
+
+                //Foreach loop
+                int j = 1;
+                for (int grade : elever.get(i).getKarakter()) {
+                    System.out.print("Grade " + (j) + ". " + grade + "\n");
+                    j++;
+                }
+            }
         }
     }
 }
