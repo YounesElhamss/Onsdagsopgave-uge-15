@@ -5,7 +5,15 @@ public class Elever {
     public Elever(String name, int karakter) {
         this.name = name;
         this.karakter = karakter;
+
+    public String getName() {
+        return name;
     }
+
+    public int getKarakter() {
+        return karakter;
+    }
+
     public Elever() {
 
     }
