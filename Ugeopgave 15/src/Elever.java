@@ -1,6 +1,11 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Elever {
     private String name;
     private int[] karakter;
+
+    ArrayList<Elever> elevListe = new ArrayList<>();
 
     public String getName() {
         return name;
@@ -22,5 +27,14 @@ public class Elever {
             gennemsnit += karakter[i];
         }
         return gennemsnit /karakter.length;
+    }
+
+    @Override
+    public String toString() {
+        return "Elever{" +
+                "name='" + name + '\'' +
+                ", karakter=" + Arrays.toString(karakter) +
+                ", elevListe=" + elevListe +
+                '}';
     }
 }
