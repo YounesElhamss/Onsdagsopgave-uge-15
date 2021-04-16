@@ -34,6 +34,8 @@ public class Karakterer {
         System.out.print(+(j) + ". Karakter: " + karakter + "\n");
         j++;
       }
+      System.out.println("Karakter gennemsnit er: " + elever.get(i).karakterGennemsnit());
     }
   }
 }
+

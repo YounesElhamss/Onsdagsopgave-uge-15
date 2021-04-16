@@ -15,6 +15,12 @@ public class Elever {
         this.karakter = karakter;
     }
     public Elever() {
-
+    }
+    public double karakterGennemsnit() {
+        int gennemsnit = 0;
+        for (int i = 0; i < karakter.length; i++) {
+            gennemsnit += karakter[i];
+        }
+        return gennemsnit /karakter.length;
     }
 }
