@@ -1,40 +1,41 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UI {
     public void hentKarakter() {
-        Elever elever = new Elever();
-        int[] karakterer = new int[7];
+       // int[] karakterer = new int[7];// Dennne her lavede alt balleden
         Scanner input = new Scanner(System.in);
 
         boolean erTilføjet = true;
-
+        ArrayList<Elever> elever = new ArrayList<>();
         while (erTilføjet) {
+            int[] karakterer = new int[7];
             System.out.println("Indtast navn: ");
             String navn = input.next();
 
             for (int i = 0; i < karakterer.length; i++) {
                 System.out.println("Indtast karakter: ");
                 karakterer[i] = input.nextInt();
-
             }
+            elever.add(new Elever(navn, karakterer));
+
             System.out.println("Vil du tilføje en elev? (ja/nej): ");
             String svar = input.next();
             if (svar.equals("nej")) {
                 erTilføjet = false;
             }
-            elever.elevListe.add(new Elever(navn, karakterer));
         }
 
-        for (int i = 0; i < elever.elevListe.size(); i++) {
-            System.out.println(elever.elevListe.get(i).getName());
+        for (int i = 0; i < elever.size(); i++) {
+            System.out.println(elever.get(i).getName());
 
             //Foreach loop
             int j = 1;
-            for (int karakter : elever.elevListe.get(i).getKarakter()) {
+            for (int karakter : elever.get(i).getKarakter()) {
                 System.out.print(+(j) + ". Karakter: " + karakter + "\n");
                 j++;
             }
-            System.out.println("Karakter gennemsnit er: " + elever.elevListe.get(i).karakterGennemsnit());
+            System.out.printf("Karakter gennemsnit er :%.1f", elever.get(i).karakterGennemsnit());
         }
     }
 }

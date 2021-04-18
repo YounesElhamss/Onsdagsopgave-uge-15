@@ -1,40 +1,29 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Elever {
-    private String name;
-    private int[] karakter;
 
-    ArrayList<Elever> elevListe = new ArrayList<>();
+  String name;
+  int[] karakter;
 
-    public String getName() {
-        return name;
-    }
+  public Elever(String name, int[] karakter) {
+    this.name = name;
+    this.karakter = karakter;
+  }
+  public String getName() {
+    return name;
+  }
 
-    public int[] getKarakter() {
-        return karakter;
-    }
+  public int[] getKarakter() {
+    return karakter;
+  }
 
-    public Elever(String name, int[] karakter) {
-        this.name = name;
-        this.karakter = karakter;
-    }
-    public Elever() {
-    }
-    public double karakterGennemsnit() {
-        int gennemsnit = 0;
-        for (int i = 0; i < karakter.length; i++) {
-            gennemsnit += karakter[i];
-        }
-        return gennemsnit /karakter.length;
-    }
+  public Elever() {
+    return ;
+  }
 
-    @Override
-    public String toString() {
-        return "Elever{" +
-                "name='" + name + '\'' +
-                ", karakter=" + Arrays.toString(karakter) +
-                ", elevListe=" + elevListe +
-                '}';
+  public double karakterGennemsnit() {
+    double gennemsnit = 0.0;
+    for (int i = 0; i < karakter.length; i++) {
+      gennemsnit += karakter[i];
     }
+    return gennemsnit / karakter.length;
+  }
 }

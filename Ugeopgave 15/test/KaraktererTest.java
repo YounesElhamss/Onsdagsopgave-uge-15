@@ -1,7 +1,6 @@
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class KaraktererTest {
 
@@ -10,9 +9,9 @@ class KaraktererTest {
     //Arrange
     Karakterer karakterer = new Karakterer();
     // Act
-      int actual = 6;
-      int expected = 6;
-      // Assert
-      assertEquals(expected, actual);
-    }
+    int actual = 6;
+    int expected = 6;
+    // Assert
+    assertEquals(expected, actual);
   }
+}
